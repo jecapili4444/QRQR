@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>John Ezekiel Capili - Credit Analyst</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
@@ -18,6 +18,17 @@
         }
       </style>
     </noscript>
+       <script src="index.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("Wg6jSbafmmSSIM3Xg");
+      })();
+    </script>
   </head>
   <body id="top">
     <header>
@@ -255,42 +266,35 @@ function makeCall() {
       <div class="row">
         <div class="col-md-6">
           <div class="card-body">
-            <form action="mailto:ej@katala88.com" method="POST">
-              <div class="p pb-3"><strong>Leave a Message and Don't Hesitate </strong></div>
-              <div class="row mb-3">
-                <div class="col">
-                  <div class="input-group"><span class="input-group-addon"><i class="fa fa-user-circle"></i></span>
-                    <input class="form-control" type="text" name="name" placeholder="Name" required="required"/>
-                  </div>
-                </div>
-              </div>
-              <div class="row mb-3">
-                <div class="col">
-                  <div class="input-group"><span class="input-group-addon"><i class="fa fa-file-text"></i></span>
-                    <input class="form-control" type="text" name="Subject" placeholder="Subject" required="required"/>
-                  </div>
-                </div>
-              </div>
-              <div class="row mb-3">
-                <div class="col">
-                  <div class="input-group"><span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                    <input class="form-control" type="email" name="_replyto" placeholder="E-mail" required="required"/>
-                  </div>
-                </div>
-              </div>
-              <div class="row mb-3">
-                <div class="col">
-                  <div class="form-group">
-                    <textarea class="form-control" name="message" placeholder="Your Message" required="required"></textarea>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <button class="btn btn-primary" type="submit">Send</button>
-                </div>
-              </div>
-            </form>
+             <div class="container border mt-3 bg-light">
+      <div class="row">
+        <div class="col-md-6 border-left py-3">
+          <div class="form-group">
+            <h5 for="name">Name</h5>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Enter name"
+            />
+          </div>
+          <div class="form-group">
+            <h5 for="email">Email</h5>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Enter email"
+            />
+          </div>
+          <div class="form-group">
+            <h5 for="message">Message</h5>
+            <textarea class="form-control" id="message" rows="3"></textarea>
+          </div>
+          <button class="btn btn-primary" onclick="sendMail()">Submit</button>
+        </div>
+      </div>
+    </div>
           </div>
         </div>
       </div>

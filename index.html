@@ -48,7 +48,7 @@
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link smooth-scroll" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link smooth-scroll" href="#portfolio">Portfolio</a></li>
-          <li class="nav-item"><a class="nav-link smooth-scroll" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link smooth-scroll" href="#katala88">Katala Offers</a></li>
           <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -92,7 +92,11 @@ function makeCall() {
 }
 </script>
 
-          <a class="btn btn-primary btn-orange" href="#" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Message Me</a>
+      <a class="btn btn-primary btn-orange" href="sms:09171632274">Message Me</a>
+
+
+
+
           
         </div>
       </div>
@@ -100,9 +104,9 @@ function makeCall() {
         <div class="container">
           <div class="button-container">
             <a class="btn btn-default btn-round btn-lg btn-icon" href="https://www.facebook.com/profile.php?id=61551615011954&mibextid=ZbWKwL" rel="tooltip" title="Chat me on Facebook">
-            <i class="fa fa-facebook"></i></a><a class="btn btn-default btn-round btn-lg btn-icon" href="#" rel="tooltip" title="Chat me on Telegram"><i class="fa fa-telegram"></i></a>
-            <a class="btn btn-default btn-round btn-lg btn-icon" href="mailto:recipient@example.com?subject=Subject%20Here&body=ej@katala88.com" rel="tooltip" title="Email me on Gmail"><i class="fa fa-envelope"></i></a>
-            <a class="btn btn-default btn-round btn-lg btn-icon" href="#" rel="tooltip" title="Chat me on WhatsApp"><i class="fa fa-whatsapp"></i></a>
+            <i class="fa fa-facebook"></i></a><a class="btn btn-default btn-round btn-lg btn-icon" href="https://telegram.org/dl" rel="tooltip" title="Chat me on Telegram"><i class="fa fa-telegram"></i></a>
+            <a class="btn btn-default btn-round btn-lg btn-icon" href="https://www.instagram.com/ezekiel_katala?igshid=NGVhN2U2NjQ0Yg" rel="tooltip" title="Email me on Gmail"><i class="fa fa-instagram"></i></a>
+            <a class="btn btn-default btn-round btn-lg btn-icon" href="https://whatsapp.com/dl/09171632274" rel="tooltip" title="Chat me on WhatsApp"><i class="fa fa-whatsapp"></i></a>
           </div>
         </div>
       </div>
@@ -205,7 +209,7 @@ function makeCall() {
     </div>
   </div>
 </div>
-<div class="section">
+<div class="section" id="katala88">
   <div class="container cc-education">
     <div class="h4 text-center mb-4 title">KATALA 88 Marketing Consultancy Services Offers</div>
     <div class="card">
@@ -256,45 +260,46 @@ function makeCall() {
   </div>
 </div>
 <div class="section" id="contact">
-  <div class="cc-contact-information" style="background-image: url('images/staticmap.PNG')">
+  <div class="cc-contact-information" style="background-image: url('images/aw.gif')">
     <div class="container">
-      <div class="cc-contact">
-      <div class="row">
-  <div class="col-md-9">
-    <div class="card mb-0" data-aos="zoom-in">
-      <div class="h4 text-center title">Contact me on Email</div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="card-body">
-             <div class="container border mt-3 bg-light">
-      <div class="row">
-        <div class="col-md-6 border-left py-3">
-          <div class="form-group">
-            <h5 for="name">Name</h5>
-            <input
-              type="text"
-              class="form-control"
-              id="name"
-              placeholder="Enter name"
-            />
-          </div>
-          <div class="form-group">
-            <h5 for="email">Email</h5>
-            <input
-              type="email"
-              class="form-control"
-              id="email"
-              placeholder="Enter email"
-            />
-          </div>
-          <div class="form-group">
-            <h5 for="message">Message</h5>
-            <textarea class="form-control" id="message" rows="3"></textarea>
-          </div>
-          <button class="btn btn-primary" onclick="sendMail()">Submit</button>
-        </div>
-      </div>
-    </div>
+    <div class="cc-contact">
+  <div class="row">
+    <div class="col-md-9">
+      <div class="card mb-0" data-aos="zoom-in">
+        <div class="h4 text-center title">Contact me on Email</div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card-body">
+              <div class="container border mt-3 bg-light"> 
+                <div class="row">
+                  <div class="col-md-12 py-3"> <!-- Adjusted the column size to take the full width on small screens -->
+                    <div class="form-group">
+                      <label for="name">Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        placeholder="Enter name"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="Enter email"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="message">Message</label>
+                      <textarea class="form-control" id="message" rows="3"></textarea>
+                    </div>
+                    <button class="btn btn-primary" onclick="validateAndSendMail()">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -302,8 +307,21 @@ function makeCall() {
   </div>
 </div>
 
+<script>
+  function validateAndSendMail() {
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
 
-    </div>
+    if (name === '' || email === '' || message === '') {
+      alert('Please fill out all required fields.');
+    } else {
+      // Add your email sending logic here
+      sendMail();
+    }
+  }
+</script>
+
   </div>
 </div>
 
@@ -313,7 +331,7 @@ function makeCall() {
 </div></div>
     </div>
     <footer class="footer">
-      <div class="container text-center"><a class="cc-facebook btn btn-link" href="#"><i class="fa fa-facebook fa-2x " aria-hidden="true"></i></a><a class="cc-twitter btn btn-link " href="#"><i class="fa fa-twitter fa-2x " aria-hidden="true"></i></a><a class="cc-google-plus btn btn-link" href="#"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a><a class="cc-instagram btn btn-link" href="#"><i class="fa fa-instagram fa-2x " aria-hidden="true"></i></a></div>
+      <div class="container text-center"><a class="cc-facebook btn btn-link" href="https://www.facebook.com/profile.php?id=61551615011954&mibextid=ZbWKwL"><i class="fa fa-facebook fa-2x " aria-hidden="true"></i></a><a class="cc-twitter btn btn-link " href="https://telegram.org/dl"><i class="fa fa-telegram fa-2x " aria-hidden="true"></i></a><a class="cc-google-plus btn btn-link" href="https://whatsapp.com/dl/09171632274"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a><a class="cc-instagram btn btn-link" href="https://www.instagram.com/ezekiel_katala?igshid=NGVhN2U2NjQ0Yg"><i class="fa fa-instagram fa-2x " aria-hidden="true"></i></a></div>
       <div class="h4 title text-center">John Ezekiel G. Capili</div>
       <div class="text-center text-muted">
         <p>&copy; Katala 88 Marketing. All rights reserved.<br>Loan - <a class="credit" href="https://templateflip.com" target="_blank">For your Future</a></p>

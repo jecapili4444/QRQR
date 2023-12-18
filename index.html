@@ -92,12 +92,36 @@ function makeCall() {
 }
 </script>
 
-      <a class="btn btn-primary btn-orange smooth-scroll mr-2" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Message Me</a>
+     <a class="btn btn-primary btn-orange smooth-scroll mr-2" data-aos="zoom-in" data-aos-anchor="data-aos-anchor" onclick="sendSMS()">Message Me</a>
 
+<script>
+function sendSMS() {
+    var phoneNumber = "+919171632274"; // Replace with your phone number
+    var message = "Hello!"; // You can set the initial message
 
+    // Use Twilio API to send SMS
+    var twilioUrl = "https://api.twilio.com/2010-04-01/Accounts/your_account_sid/Messages.json";
+    var twilioAuthToken = "your_auth_token";
+    var twilioPhoneNumber = "your_twilio_phone_number";
 
-
-          
+    fetch(twilioUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Authorization': 'Basic ' + btoa('your_account_sid:' + twilioAuthToken),
+        },
+        body: new URLSearchParams({
+            'To': phoneNumber,
+            'From': twilioPhoneNumber,
+            'Body': message,
+        }),
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+}
+</script>
+    
         </div>
       </div>
       <div class="section">
@@ -260,7 +284,7 @@ function makeCall() {
   </div>
 </div>
 <div class="section" id="contact">
-  <div class="cc-contact-information" style="background-image: url('images/aw.gif')">
+  <div class="cc-contact-information" style="background-image: url('images/contact.png')">
     <div class="container">
     <div class="cc-contact">
   <div class="row">
@@ -322,6 +346,18 @@ function makeCall() {
   }
 </script>
 
+  </div>
+</div>
+
+<div class="section" id="map">
+  <div class="container">
+ <div class="h4 text-center title">KATALA 88 Office Location</div>
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Google Maps iframe -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240.88720281177172!2d120.61896056535755!3d14.981863145368878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33965f4cb882ab53%3A0x90e935109d015843!2sXJJ9%2BPJV%2C%20Guagua%2C%20Pampanga!5e0!3m2!1sen!2sph!4v1702871263558!5m2!1sen!2sph" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
   </div>
 </div>
 

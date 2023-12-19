@@ -31,6 +31,80 @@
     </script>
   </head>
   <body id="top">
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var noteContent = `
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>My Personal Note</title>
+                <style>
+                    body {
+                        font-family: 'Arial', sans-serif;
+                        text-align: center;
+                        margin: 20px;
+                    }
+
+                    h1 {
+                        color: #333;
+                    }
+
+                    #noteContainer {
+                        max-width: 600px;
+                        margin: 0 auto;
+                        padding: 20px;
+                        border: 1px solid #ddd;
+                        border-radius: 8px;
+                        background-color: #f9f9f9;
+                    }
+
+                    p {
+                        font-size: 16px;
+                        color: #555;
+                        margin-bottom: 10px;
+                    }
+
+                    ul {
+                        list-style-type: none;
+                        padding: 0;
+                    }
+
+                    li {
+                        font-size: 14px;
+                        color: #777;
+                        margin-bottom: 5px;
+                    }
+
+                    #profileImage {
+                        width: 100%;
+                        border-radius: 8px;
+                        margin-top: 15px;
+                    }
+                </style>
+            </head>
+            <body>
+                <div id="noteContainer">
+                    <h1>VCARD</h1>
+                   <img id="profileImage" src="C:/Users/Ezekiel/Desktop/QRQR-main/QRQR-main/3.png" alt="Image" alt="Profile Image">
+                </div>
+            </body>
+            </html>
+        `;
+
+        var blob = new Blob([noteContent], { type: 'text/html' });
+
+        var downloadLink = document.createElement('a');
+        downloadLink.href = window.URL.createObjectURL(blob);
+        downloadLink.download = 'EzekielKatala.html';
+
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+    });
+</script>
+    
     <header>
       <div class="profile-page sidebar-collapse">
   <nav class="navbar navbar-expand-lg fixed-top navbar-transparent" style="background-color: #1A2C44;" color-on-scroll="400">
@@ -190,6 +264,13 @@ function makeCall() {
                     <figcaption>
                       <div class="h4">Ms. Amy Lei A. Nagrama</div>
                       <p>Hino Profia Wing Van Truck</p>
+                    </figcaption>
+                  </figure></a></div>
+                   <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#web-development">
+                  <figure class="cc-effect"><img src="images/project-5.jpg" alt="Image"/>
+                    <figcaption>
+                      <div class="h4">Mr. Jeremiah Sioson</div>
+                      <p>Isuzu Freezer Van Truck</p>
                     </figcaption>
                   </figure></a></div>
               <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#web-development">
